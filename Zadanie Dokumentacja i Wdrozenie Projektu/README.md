@@ -4,6 +4,7 @@
 # 2. Przygotuj diagram wdrożenia projektu
 
 # 3. Napisz skrypt wdrożeniowy wskazanego oprogramowania
+```
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "Uruchom skrypt z uprawnieniami administratora."
     exit
@@ -24,3 +25,4 @@ Start-Process -Wait -FilePath $pygameInstallerPath
 Start-Process -Wait -FilePath $qtpysideInstallerPath
 
 Write-Host "Instalacja zakończona pomyślnie."
+```
