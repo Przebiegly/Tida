@@ -1,10 +1,11 @@
 # Konfiguracja Stacji Egzaminacyjnej INF.03
 ## 1. Przygotuj checklistę działań
 - [ ] Zapewnienie dostępu do stacji egzaminacyjnej wraz z kontem
-- [ ] Instalacja niezbędnego oprogramowania typu (Wirar, K3b do nagrywania płyt, Serwer XAMPP
-- [ ] Konfiguracja
+- [ ] Instalacja niezbędnego oprogramowania typu (Wirar, K3b do nagrywania płyt, Serwer XAMPP)
+- [ ] Konfiguracja Zainstalowanego Oprogramowania 
 - [ ] Testowanie Zainstalowanego Oprogramowania
-- [ ] 
+- [ ] Zaplanowanie backupu po egzaminie
+
 ## 2. Przygotuj diagram wdrożenia projektu
 
 ## 3. Napisz skrypt wdrożeniowy wskazanego oprogramowania
