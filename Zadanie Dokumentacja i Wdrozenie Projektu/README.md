@@ -8,7 +8,7 @@
 
 ## 2. Przygotuj diagram wdrożenia projektu
 <span>
-![image](https://github.com/Przebiegly/Tida/assets/90707614/2c05b8dc-43ad-48e2-89b5-b908477790b7)
+<image src="https://github.com/Przebiegly/Tida/assets/90707614/2c05b8dc-43ad-48e2-89b5-b908477790b7" alt="jakies zdjecie" ></image>
 </span>
 <br/>
 
