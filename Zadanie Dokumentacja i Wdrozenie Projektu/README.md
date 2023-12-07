@@ -13,7 +13,10 @@
 </p>
 <br/>
 
+
+<p align="center">
 ![image](https://github.com/Przebiegly/Tida/assets/90707614/f238a2b9-bf50-4383-a196-0be2b7634a7c)
+</p>
 
 
 ## 3. Napisz skrypt wdrożeniowy wskazanego oprogramowania
