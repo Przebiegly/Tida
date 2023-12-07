@@ -1,9 +1,13 @@
 # Konfiguracja Stacji Egzaminacyjnej INF.03
-# 1. Przygotuj checklistę działań
+## 1. Przygotuj checklistę działań
+- [ ] Zapewnienie dostępu do stacji egzaminacyjnej wraz z kontem
+- [ ] Instalacja niezbędnego oprogramowania typu (Wirar, K3b do nagrywania płyt, Serwer XAMPP
+- [ ] Konfiguracja
+- [ ] Testowanie Zainstalowanego Oprogramowania
+- [ ] 
+## 2. Przygotuj diagram wdrożenia projektu
 
-# 2. Przygotuj diagram wdrożenia projektu
-
-# 3. Napisz skrypt wdrożeniowy wskazanego oprogramowania
+## 3. Napisz skrypt wdrożeniowy wskazanego oprogramowania
 ```
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
     Write-Host "Uruchom skrypt z uprawnieniami administratora."
