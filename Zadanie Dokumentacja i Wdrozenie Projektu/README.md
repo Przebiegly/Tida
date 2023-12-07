@@ -7,9 +7,8 @@
 - [ ] Zaplanowanie backupu po egzaminie
 
 ## 2. Przygotuj diagram wdrożenia projektu
-![image](https://github.com/Przebiegly/Tida/assets/90707614/7996f4e4-7393-45fb-b48d-c99f1b057dbd)
 
-<span>
+<span style="align:center;">
 <image src="https://github.com/Przebiegly/Tida/assets/90707614/2c05b8dc-43ad-48e2-89b5-b908477790b7" alt="jakies zdjecie" ></image>
 </span>
 <br/>
