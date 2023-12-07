@@ -21,24 +21,27 @@
 
 ## 3. Napisz skrypt wdrożeniowy wskazanego oprogramowania
 ```
-if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-    Write-Host "Uruchom skrypt z uprawnieniami administratora."
-    exit
+if (-not (Test-Path "C:\xampp\")) {
+    Invoke-WebRequest -Uri "https://www.apachefriends.org/xampp-files/8.0.10/xampp-windows-x64-8.0.10-0-VS16-installer.exe" -OutFile "xampp-installer.exe"
+    Start-Process -Wait -FilePath ".\xampp-installer.exe"
+    Remove-Item -Path ".\xampp-installer.exe"
 }
 
-$apacheInstallerPath = "C:ścieżka\do\pliku\apache_installer.exe"
-$phpInstallerPath = "C:ścieżka\do\pliku\php_installer.exe"
-$pythonInstallerPath = "C:ścieżka\do\pliku\python_installer.exe"
-$mysqlInstallerPath = "C:ścieżka\do\pliku\mysql_installer.exe"
-$pygameInstallerPath = "C:ścieżka\do\pliku\pygame_installer.exe"
-$qtpysideInstallerPath = "C:ścieżka\do\pliku\qtpyside_installer.exe"
+if (-not (Get-Command "pip" -ErrorAction SilentlyContinue)) {
+    Invoke-WebRequest -Uri "https://bootstrap.pypa.io/get-pip.py" -OutFile "get-pip.py"
+    python get-pip.py
+    Remove-Item -Path ".\get-pip.py"
+}
 
-Start-Process -Wait -FilePath $apacheInstallerPath
-Start-Process -Wait -FilePath $phpInstallerPath
-Start-Process -Wait -FilePath $pythonInstallerPath
-Start-Process -Wait -FilePath $mysqlInstallerPath
-Start-Process -Wait -FilePath $pygameInstallerPath
-Start-Process -Wait -FilePath $qtpysideInstallerPath
+$pythonPackages = @("pygame", "PySide2")
 
-Write-Host "Instalacja zakończona pomyślnie."
+foreach ($package in $pythonPackages) {
+    if (-not (Get-Module $package -ListAvailable)) {
+        python -m pip install $package
+    }
+}
+
+Write-Host "Instalacja zakończona."
+
+}
 ```
