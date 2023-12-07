@@ -7,6 +7,9 @@
 - [ ] Zaplanowanie backupu po egzaminie
 
 ## 2. Przygotuj diagram wdrożenia projektu
+![image](https://github.com/Przebiegly/Tida/assets/90707614/2c05b8dc-43ad-48e2-89b5-b908477790b7)
+![image](https://github.com/Przebiegly/Tida/assets/90707614/f238a2b9-bf50-4383-a196-0be2b7634a7c)
+
 
 ## 3. Napisz skrypt wdrożeniowy wskazanego oprogramowania
 ```
