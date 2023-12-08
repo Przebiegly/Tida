@@ -21,27 +21,27 @@
 
 ## 3. Napisz skrypt wdrożeniowy wskazanego oprogramowania
 ```
-if (-not (Test-Path "C:\xampp\")) {
-    Invoke-WebRequest -Uri "https://www.apachefriends.org/xampp-files/8.0.10/xampp-windows-x64-8.0.10-0-VS16-installer.exe" -OutFile "xampp-installer.exe"
-    Start-Process -Wait -FilePath ".\xampp-installer.exe"
-    Remove-Item -Path ".\xampp-installer.exe"
-}
+Invoke-WebRequest -Uri "https://downloads.apache.org/httpd/httpd-2.4.51-win64-VS16.zip" -OutFile "httpd.zip"
+Expand-Archive -Path "httpd.zip" -DestinationPath "C:\Apache"
+Rename-Item -Path "C:\Apache\httpd-2.4.51-win64-VS16" -NewName "Apache"
+Remove-Item -Path "httpd.zip" -Force
 
-if (-not (Get-Command "pip" -ErrorAction SilentlyContinue)) {
-    Invoke-WebRequest -Uri "https://bootstrap.pypa.io/get-pip.py" -OutFile "get-pip.py"
-    python get-pip.py
-    Remove-Item -Path ".\get-pip.py"
-}
+Invoke-WebRequest -Uri "https://windows.php.net/downloads/releases/php-8.0.13-Win32-vs16-x64.zip" -OutFile "php.zip"
+Expand-Archive -Path "php.zip" -DestinationPath "C:\PHP"
+Remove-Item -Path "php.zip" -Force
 
-$pythonPackages = @("pygame", "PySide2")
+Invoke-WebRequest -Uri "https://www.python.org/ftp/python/3.10.0/python-3.10.0-amd64.exe" -OutFile "python.exe"
+Start-Process -Wait -FilePath ".\python.exe" -ArgumentList "/quiet", "InstallAllUsers=1", "PrependPath=1"
+Remove-Item -Path "python.exe" -Force
 
-foreach ($package in $pythonPackages) {
-    if (-not (Get-Module $package -ListAvailable)) {
-        python -m pip install $package
-    }
-}
+Invoke-WebRequest -Uri "https://dev.mysql.com/get/Downloads/MySQLInstaller/mysql-installer-web-community-8.0.27.0.msi" -OutFile "mysql-installer.msi"
+Start-Process -Wait -FilePath "msiexec" -ArgumentList "/i", "mysql-installer.msi", "/quiet", "/qn", "/norestart"
+Remove-Item -Path "mysql-installer.msi" -Force
+
+pip install pygame
+
+pip install PyQt5
 
 Write-Host "Instalacja zakończona."
 
-}
 ```
